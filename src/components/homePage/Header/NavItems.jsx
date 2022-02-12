@@ -5,8 +5,12 @@ export default function NavItems() {
   return (
     <HeaderItemsStyle>
       <ul>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
         <li className="btnSignIn">
           <Link to="/signin">Sign in</Link>
         </li>

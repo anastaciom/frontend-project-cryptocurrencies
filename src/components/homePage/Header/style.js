@@ -8,6 +8,8 @@ export const HeaderStyle = styled.header`
   align-items: center;
   justify-content: space-around;
   border-bottom: 2px #e0e0e0 solid;
+  position: fixed;
+  z-index: 1000;
 `;
 
 export const HeaderItemsStyle = styled.div`
@@ -39,24 +41,23 @@ export const HeaderItemsStyle = styled.div`
     }
   }
 
+  a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+
+    &:visited,
+    &:link {
+      color: inherit;
+    }
+  }
   .btnSignIn {
     padding: 10px;
     margin-left: 50px;
     border: 2px solid #cacaca;
     border-radius: 20px;
-    background-color: #6a00ff;
+    background-color: #432a78;
     color: #fff;
-
-    a {
-      width: 100%;
-      height: 100%;
-      text-decoration: none;
-
-      &:visited,
-      &:link {
-        color: inherit;
-      }
-    }
 
     &:hover {
       transition: all ease-in 0.2s;
