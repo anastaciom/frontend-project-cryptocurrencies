@@ -13,5 +13,19 @@ body, html, #root {
   height: 100%;
   scroll-behavior: smooth;
 }
+
+body::-webkit-scrollbar {
+  width: 12px;               
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;   
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cacaca;   
+  border-radius: 10px;      
+  border: 1px solid  #cacaca;  
+}
 `;
 export default GlobalStyles;

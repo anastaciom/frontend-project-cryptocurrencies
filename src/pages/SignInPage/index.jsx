@@ -1,7 +1,9 @@
-import React from 'react'
-
+import React from "react";
+import  {ContainerStyle} from './index.style'
 export default function SignInPage() {
   return (
-    <div>SignInPage</div>
-  )
+    <ContainerStyle>
+      <h1>indexx</h1>
+    </ContainerStyle>
+  );
 }

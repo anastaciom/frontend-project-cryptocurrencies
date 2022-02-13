@@ -13,7 +13,7 @@ export const AboutStyle = styled.section`
        margin-top: -180px;
        margin-bottom: 20px;
        font-weight: 500;
-       letter-spacing: 3px
+       letter-spacing: 3px;
    } 
 
    div{
@@ -34,3 +34,13 @@ export const AboutStyle = styled.section`
        }
    }
 `;
+
+
+export const DivisionWavesStyle = styled.svg`
+
+path{
+    fill:${props=> props.theme.colors.backgroundBanner};
+    fill-opacity:"1";
+}
+
+`

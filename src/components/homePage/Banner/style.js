@@ -7,7 +7,7 @@ export const BannerStyle = styled.main`
   align-items: center;
   justify-content: center;
   user-select: none;
-  background-color: #f7f7f7;
+  background-color: ${props=> props.theme.colors.backgroundBanner};
 
   div {
     width: 50%;
@@ -36,7 +36,7 @@ export const BannerStyle = styled.main`
 }
     
   h1 {
-    color: #432a78;
+    color: ${props=> props.theme.colors.textBanner};
     font-size: 60px;
     font-weight: 500;
     letter-spacing: 3px;
@@ -45,7 +45,7 @@ export const BannerStyle = styled.main`
   }
   p {
     width: 80%;
-    color: #432a78;
+    color: ${props=> props.theme.colors.textBanner};
     text-align: justify;
     font-size: 30px;
     padding: 10px;
