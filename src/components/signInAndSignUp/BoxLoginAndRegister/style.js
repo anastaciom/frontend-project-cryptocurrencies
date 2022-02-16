@@ -74,6 +74,16 @@ export const BoxLoginAndRegisterStyle = styled.div`
       color: ${(props) => props.theme.BoxLoginAndRegister.text};
       background-color: ${(props) => props.theme.BoxLoginAndRegister.btnBG};
       &:hover {
+        transition: all ease-in 0.2s;
+        transform: scale(1.1);
+        box-shadow: -1px -1px 18px 1px ${(props) => props.theme.BoxLoginAndRegister.btnBG};
+      }
+      &:active {
+        transition: all ease-in 0.1s;
+        transform: scale(0.99);
+        background-color: ${(props) => props.theme.BoxLoginAndRegister.text};
+        color: ${(props) => props.theme.BoxLoginAndRegister.btnBG};
+        box-shadow: -1px -1px 18px 1px ${(props) => props.theme.BoxLoginAndRegister.text};
       }
     }
   }

@@ -8,13 +8,11 @@ export default function BoxLogin({ title, link }) {
     <BoxLoginAndRegisterStyle>
       <h1>{title}</h1>
 
-      <form method="post">
-        {title === "Sign In" ? (
-          <FormLogin title={title} />
-        ) : (
-          <FormRegister title={title} />
-        )}
-      </form>
+      {title === "Sign In" ? (
+        <FormLogin title={title} />
+      ) : (
+        <FormRegister title={title} />
+      )}
 
       {link === "Sign Up" ? (
         <p>
