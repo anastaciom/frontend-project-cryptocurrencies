@@ -6,12 +6,13 @@ export const auth = () => async (dispatch) => {
   });
 
   try {
-    await api.get("/dashboard");
+   const {data} = await api.get("/dashboard");
 
     dispatch({
       type: "IS_AUTH_TRUE",
-      payload: true,
+      payload: await data,
     });
+    
   } catch (error) {
     dispatch({
       type: "IS_AUTH_FALSE",

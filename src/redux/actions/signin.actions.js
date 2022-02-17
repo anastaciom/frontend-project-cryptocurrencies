@@ -7,18 +7,17 @@ export const signIn = (user) => async (dispatch) => {
 
   try {
     const response = await api.post("/signin", user);
-
+    
     const token = await response.data.token;
     if (token) {
       localStorage.setItem("token", token);
     }
-
     dispatch({
       type: "FETCH_USER_SUCCESS",
-      payload: response.data,
+      payload: response.data.token,
     });
 
-    window.location.pathname = "/dashboard";
+    window.location.href = "/dashboard";
   } catch (error) {
     dispatch({
       type: "FETCH_USER_FAILURE",

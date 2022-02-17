@@ -1,7 +1,8 @@
 const initialState = {
-  isAuthenticated: false,
+  data: [],
   loading: false,
   error: null,
+  isAuthenticated: false
 };
 
 export const authReducer = (state = initialState, action) => {
@@ -11,14 +12,14 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         loading: true,
         error: null,
-        isAuthenticated: false,
       };
 
     case "IS_AUTH_TRUE":
       return {
         ...state,
         loading: false,
-        isAuthenticated: action.payload,
+        data: action.payload,
+        isAuthenticated: true
       };
 
     case "IS_AUTH_FALSE":
@@ -26,7 +27,8 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: action.error,
-        isAuthenticated: false,
+        data: [],
+        isAuthenticated: false
       };
     default:
       return state;

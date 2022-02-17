@@ -14,8 +14,9 @@ export const signUp = (user) => async (dispatch, getState) => {
     }
     dispatch({
       type: "FETCH_USER_SUCCESS",
-      payload: response.data,
+      payload: response.data.token,
     });
+    window.location.href = "/dashboard";
   } catch (error) {
     dispatch({
       type: "FETCH_USER_FAILURE",

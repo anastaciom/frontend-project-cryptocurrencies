@@ -1,5 +1,5 @@
 const initialState = {
-    user: [],
+    userToken: '',
     loading: false,
     error: null
 }
@@ -18,7 +18,7 @@ export const signUpReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                user: action.payload
+                userToken: action.payload
             }
 
         case "FETCH_USER_FAILURE":
@@ -26,7 +26,7 @@ export const signUpReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 error: action.error,
-                user: []
+                userToken: ''
             }
         default:
             return state
