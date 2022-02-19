@@ -11,7 +11,6 @@ export const authReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        error: null,
       };
 
     case "IS_AUTH_TRUE":
