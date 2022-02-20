@@ -20,7 +20,7 @@ export const signUp = (user) => async (dispatch, getState) => {
   } catch (error) {
     dispatch({
       type: "FETCH_USER_FAILURE",
-      error,
+      error : error.response.data.error,
     });
   }
 };

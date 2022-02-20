@@ -16,7 +16,7 @@ export const auth = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "IS_AUTH_FALSE",
-      error,
+      error : error.response.data.error,
     });
   }
 };

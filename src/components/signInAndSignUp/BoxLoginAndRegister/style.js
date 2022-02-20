@@ -88,3 +88,17 @@ export const BoxLoginAndRegisterStyle = styled.div`
     }
   }
 `;
+
+export const BtnShowPasswordLoginStyle = styled.span`
+  position: absolute;
+  right: 60px;
+  bottom: 250px;
+  cursor: pointer;
+`;
+
+export const BtnShowPasswordRegisterStyle = styled.span`
+  position: absolute;
+  right: 60px;
+  bottom: 192px;
+  cursor: pointer;
+`;
