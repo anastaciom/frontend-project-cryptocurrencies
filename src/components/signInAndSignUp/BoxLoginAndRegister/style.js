@@ -48,6 +48,19 @@ export const BoxLoginAndRegisterStyle = styled.div`
     }
   }
 
+  a {
+      margin-top: -20px;
+      color: ${(props) => props.theme.BoxLoginAndRegister.text};
+      font-weight: 500;
+      letter-spacing: 1px;
+      &:hover,
+      &:active {
+        color: #6a00ff;
+        transition: 0.2s all ease-in-out;
+      }
+    }
+
+
   form {
     width: inherit;
     height: 60%;
@@ -92,7 +105,7 @@ export const BoxLoginAndRegisterStyle = styled.div`
 export const BtnShowPasswordLoginStyle = styled.span`
   position: absolute;
   right: 60px;
-  bottom: 250px;
+  bottom: 243px;
   cursor: pointer;
 `;
 

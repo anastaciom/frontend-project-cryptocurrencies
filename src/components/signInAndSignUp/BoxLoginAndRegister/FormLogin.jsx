@@ -12,7 +12,7 @@ export default function FormLogin({ title }) {
  
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signIn({ email: email, password: password }));
+    dispatch(signIn({email,password}));
     setEmail("");
     setPassword("");
   };
@@ -49,7 +49,7 @@ export default function FormLogin({ title }) {
         )}
       </BtnShowPasswordLoginStyle>
       <button type="submit">{title}</button>
-      <h4>Forget password?</h4>
+      {/* <h4>Forget password?</h4> */}
     </form>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { signUp } from "../../../redux/actions/signup.actions";
 import { Visibility, VisibilityOff } from "@mui/icons-material/";
 import { BtnShowPasswordRegisterStyle } from "./style";
@@ -13,7 +13,7 @@ export default function FormRegister({ title }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signUp({ name: name, email: email, password: password }));
+    dispatch(signUp({ name, email, password }));
     setName("");
     setEmail("");
     setPassword("");

@@ -15,12 +15,15 @@ export default function BoxLogin({ title, link }) {
       )}
 
       {link === "Sign Up" ? (
-        <p>
-          Don't have an account? <Link to="/signUp">Sign Up</Link>
-        </p>
+        <>
+         <Link to="/signin/forgot_password">Forget password ?</Link>
+          <p>
+            Don't have an account? <Link to="/signup">Sign Up</Link>
+          </p>
+        </>
       ) : (
         <p>
-          Have an account? <Link to="/signIn">Sign In</Link>
+          Have an account? <Link to="/signin">Sign In</Link>
         </p>
       )}
     </BoxLoginAndRegisterStyle>
