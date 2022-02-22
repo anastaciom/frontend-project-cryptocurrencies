@@ -13,7 +13,7 @@ export const forgetPassword = (email) => async (dispatch) => {
       payload: response.data.status,
     });
 
-    // window.location.href = "/signin/reset_password";
+    
   } catch (error) {
     dispatch({
       type: "SEND_TOKEN_FAILURE",

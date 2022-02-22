@@ -3,13 +3,15 @@ import { signUpReducer } from '../reducers/signup.reducer';
 import { signInReducer } from '../reducers/signin.reducer';
 import { authReducer} from '../reducers/auth.reducer';
 import { forgotPasswordReducer } from "../reducers/forgetPassword.reducer";
+import { resetPasswordReducer } from "../reducers/resetPassword.reducer";
 import thunk from 'redux-thunk'
 
 const rootReducer = combineReducers({
    signUp: signUpReducer,
    signIn: signInReducer,
    auth: authReducer,
-   forgotPassword : forgotPasswordReducer
+   forgotPassword : forgotPasswordReducer,
+   resetPassword: resetPasswordReducer
 })
 const store = createStore(rootReducer, applyMiddleware(thunk))
 export default store

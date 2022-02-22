@@ -7,12 +7,13 @@ import SignUpPage from "./SignUpPage";
 import DashboardPage from "./DashboardPage";
 import { auth } from "../redux/actions/auth.actions";
 import { useDispatch } from "react-redux";
-import ForgotPasswordPage from "./Forgot_password";
+import ForgotPasswordPage from "./ForgotPassword";
+import ResetPasswordPage from "./ResetPassword";
 
 export default function AppRoutes() {
   function PrivateRoute() {
     const dispatch = useDispatch();
-    const { isAuthenticated, loading, error} = useSelector(
+    const { isAuthenticated, loading, error } = useSelector(
       (state) => state.auth
     );
     useEffect(() => {
@@ -36,7 +37,8 @@ export default function AppRoutes() {
       <Route path="*" element={<h1>Opsss.....</h1>} />
       <Route path="/" element={<HomePage />} />
       <Route path="/signin" element={<SignInPage />} />
-      <Route path="/signin/forgot_password" element={<ForgotPasswordPage/>} />
+      <Route path="/signin/forgot_password" element={<ForgotPasswordPage />} />
+      <Route path="/signin/reset_password" element={<ResetPasswordPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/dashboard" element={<PrivateRoute />} />
     </Routes>
