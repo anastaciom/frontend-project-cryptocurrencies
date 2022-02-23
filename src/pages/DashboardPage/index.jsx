@@ -1,7 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import MainArea from "../../components/dashboard/MainArea";
+import SideBar from "../../components/dashboard/SideBar";
+import { DashboardStyle } from "./index.style";
 export default function DashboardPage() {
   return (
-    <div>dash</div>
-  )
+    <DashboardStyle>
+      <SideBar />
+      <MainArea />
+    </DashboardStyle>
+  );
 }

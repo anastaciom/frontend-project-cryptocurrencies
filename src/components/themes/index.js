@@ -21,6 +21,24 @@ export const ThemeLight = {
     btnBG: "#F3F6E6",
     inputBG: "#fff",
   },
+
+  dashboard: {
+    colors: {
+      sideBarbackground: "#F8F8FA",
+      background: "#fff",
+      navItems: "#fff",
+      textNavItems: "#545454",
+      boxShadow1: "#d5d5d5",
+      boxShadow2: "#ebebeb",
+      inputSearchBG: "#eaeaea",
+      inputSearchText: "#545454",
+      NotificationMenuBG: "#F8F8FA",
+      NotificationMenuText: "#545454",
+      InfoUserText: "#545454",
+      TableText: "#545454",
+      TableHeaderBG : "#eaeaea",
+    },
+  },
 };
 
 export const ThemeDark = {
@@ -45,5 +63,23 @@ export const ThemeDark = {
     text: "#cacaca",
     btnBG: "#6a00ff",
     inputBG: "#cacaca",
+  },
+
+  dashboard: {
+    colors: {
+      sideBarbackground: "#2c2c2c",
+      background: "#222",
+      navItems: "#222",
+      textNavItems: "#cacaca",
+      boxShadow1: "#202020",
+      boxShadow2: "#242424",
+      inputSearchBG: "#2c2c2c",
+      inputSearchText: "#cacaca",
+      NotificationMenuBG: "#2c2c2c",
+      NotificationMenuText: "#cacaca",
+      InfoUserText: "#cacaca",
+      TableText:"#cacaca",
+      TableHeaderBG : "#2c2c2c",
+    },
   },
 };
