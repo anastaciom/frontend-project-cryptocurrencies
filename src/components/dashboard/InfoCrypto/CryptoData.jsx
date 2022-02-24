@@ -4,7 +4,6 @@ import { CryptoDataStyle } from "./style";
 import { StarBorder } from "@mui/icons-material/";
 export default function CryptoData() {
   const state = useSelector((state) => state.auth.data.data);
-
   return (
     <CryptoDataStyle>
       <table>
