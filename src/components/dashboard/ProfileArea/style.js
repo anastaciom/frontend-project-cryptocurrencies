@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-export const MainAreaStyle = styled.nav`
+export const ProfileAreaStyle = styled.section`
   width: 85%;
   height: 100%;
 `;
-
-
 
 
 

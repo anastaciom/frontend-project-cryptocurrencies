@@ -1,12 +1,10 @@
 import React from "react";
 import CryptoData from "./CryptoData";
-import NewsArea from "./NewsArea";
 import { InfoCryptoStyle } from "./style";
-export default function InfoCrypto() {
+export default function InfoCrypto({ searchCrypto }) {
   return (
     <InfoCryptoStyle>
-     <CryptoData/>
-      <NewsArea />
+      <CryptoData searchCrypto={searchCrypto} />
     </InfoCryptoStyle>
   );
 }

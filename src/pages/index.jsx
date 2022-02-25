@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./HomePage";
 import { useSelector } from "react-redux";
 import SignInPage from "./SignInPage";
@@ -9,6 +9,9 @@ import { auth } from "../redux/actions/auth.actions";
 import { useDispatch } from "react-redux";
 import ForgotPasswordPage from "./ForgotPassword";
 import ResetPasswordPage from "./ResetPassword";
+import ProfileArea from "../components/dashboard/ProfileArea";
+import FavoritesArea from "../components/dashboard/FavoritesArea";
+import SettingsArea from "../components/dashboard/SettingsArea";
 
 export default function AppRoutes() {
   function PrivateRoute() {
@@ -40,7 +43,12 @@ export default function AppRoutes() {
       <Route path="/signin/forgot_password" element={<ForgotPasswordPage />} />
       <Route path="/signin/reset_password" element={<ResetPasswordPage />} />
       <Route path="/signup" element={<SignUpPage />} />
-      <Route path="/dashboard" element={<PrivateRoute />} />
+      <Route path="/dashboard/" element={<PrivateRoute />}>
+        <Route path="" element={<Navigate to="/dashboard/profile" />} />
+        <Route path="profile" element={<ProfileArea />} />
+        <Route path="favorites" element={<FavoritesArea/>} />
+        <Route path="settings" element={<SettingsArea/>} />
+      </Route>
     </Routes>
   );
 }

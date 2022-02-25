@@ -21,11 +21,7 @@ export const NavItemsStyle = styled.ul`
   width: 90%;
   li {
     margin: 10px 10px 20px;
-    padding: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: white;
+
     border-radius: 15px;
     cursor: pointer;
     background-color: ${(props) => props.theme.dashboard.colors.navItems};
@@ -33,13 +29,26 @@ export const NavItemsStyle = styled.ul`
     text-transform: capitalize;
     font-weight: 500;
     letter-spacing: 1px;
-    box-shadow: 1px 2px 2px ${(props) => props.theme.dashboard.colors.boxShadow1}, -1px -1px 15px ${(props) => props.theme.dashboard.colors.boxShadow2};
-
+    box-shadow: 1px 2px 2px
+        ${(props) => props.theme.dashboard.colors.boxShadow1},
+      -1px -1px 15px ${(props) => props.theme.dashboard.colors.boxShadow2};
+    a {
+      color: inherit;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 18px;
+    }
     &:hover {
       transition: all ease-in 0.2s;
       transform: scale(1.1);
       color: ${(props) => props.theme.dashboard.colors.textNavItems};
-      box-shadow: 2px 3px 3px ${(props) => props.theme.dashboard.colors.boxShadow1}, -3px -3px 25px ${(props) => props.theme.dashboard.colors.boxShadow2};;
+      box-shadow: 2px 3px 3px
+          ${(props) => props.theme.dashboard.colors.boxShadow1},
+        -3px -3px 25px ${(props) => props.theme.dashboard.colors.boxShadow2};
     }
     &:active {
       transition: all ease-in 0.1s;

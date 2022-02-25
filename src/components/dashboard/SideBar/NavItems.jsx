@@ -1,19 +1,20 @@
 import React from "react";
 import { NavItemsStyle } from "./style";
 import { Dashboard, Star, Settings } from "@mui/icons-material/";
+import { Link } from "react-router-dom";
 export default function NavItems() {
   return (
     <NavItemsStyle>
       <li>
-        <Dashboard style={{marginRight: 10}}/> Dashboard
+        <Link to="profile"><Dashboard style={{ marginRight: 10 }}/>Dashboard</Link>
       </li>
       <li>
-        <Star style={{marginRight: 10}}/>
-        Favorites
+        
+        <Link to="favorites"><Star style={{ marginRight: 10 }}/>Favorites</Link>
       </li>
       <li>
-        <Settings style={{marginRight: 10}}/>
-        Settings
+        
+        <Link to="settings"><Settings style={{ marginRight: 10 }} />Settings</Link>
       </li>
     </NavItemsStyle>
   );

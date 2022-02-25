@@ -2,8 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { CryptoDataStyle } from "./style";
 import { StarBorder } from "@mui/icons-material/";
-export default function CryptoData() {
+export default function CryptoData({ searchCrypto }) {
   const state = useSelector((state) => state.auth.data.data);
+  const search = state.filter(
+    (crypto) =>
+      crypto.id.includes(searchCrypto) ||
+      crypto.name.includes(searchCrypto) ||
+      crypto.symbol.includes(searchCrypto)
+  );
   return (
     <CryptoDataStyle>
       <table>
@@ -15,11 +21,19 @@ export default function CryptoData() {
             <th>24H</th>
             <th>Market Cap</th>
           </tr>
-          {state.map((cripto) => {
+
+          {search.map((cripto) => {
             return (
               <tr key={cripto.id}>
                 <td>
-                  <StarBorder style={{float: 'left', margin: 10, fontSize: 30, cursor: "pointer"}}/>
+                  <StarBorder
+                    style={{
+                      float: "left",
+                      margin: 10,
+                      fontSize: 30,
+                      cursor: "pointer",
+                    }}
+                  />
                   <img src={cripto.image} alt={cripto.id} />
                   <h1>{cripto.name}</h1>
                 </td>

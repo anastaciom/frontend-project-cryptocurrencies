@@ -3,10 +3,10 @@ import { HeaderStyle } from "./style";
 import SearchArea from "./SearchArea";
 import NotificationArea from "./NotificationArea";
 
-export default function Header() {
+export default function Header({ setSearchCrypto }) {
   return (
     <HeaderStyle>
-      <SearchArea />
+      <SearchArea setSearchCrypto={setSearchCrypto} />
       <NotificationArea />
     </HeaderStyle>
   );

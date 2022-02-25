@@ -17,7 +17,7 @@ export const signIn = (user) => async (dispatch) => {
       payload: response.data.token,
     });
 
-    window.location.href = "/dashboard";
+    window.location.href = "/dashboard/profile";
   } catch (error) {
     dispatch({
       type: "FETCH_USER_FAILURE",
