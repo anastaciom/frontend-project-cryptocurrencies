@@ -37,15 +37,11 @@ export const ThemeLight = {
       InfoUserText: "#545454",
       TableText: "#545454",
       TableHeaderBG: "#eaeaea",
-
-      BoxNewsBG: "#ffffff",
-      BoxNewsText: "#545454",
-      NewsBG: "#eaeaea",
-      NewsDescription: "#383838",
-      NewsTitle: "#727272",
-      NewsBoxShadow1: "#d4d4d4",
-      NewsBoxShadow2: "#ffffff",
     },
+  },
+  ErrorPage: {
+    background: "#F7F7F7",
+    color: "#432A78",
   },
 };
 
@@ -88,14 +84,10 @@ export const ThemeDark = {
       InfoUserText: "#cacaca",
       TableText: "#cacaca",
       TableHeaderBG: "#2c2c2c",
-
-      BoxNewsBG: "#222",
-      BoxNewsText: "#cacaca",
-      NewsBG: "#333",
-      NewsDescription: "#aaaaaa",
-      NewsTitle: "#c4c4c4",
-      NewsBoxShadow1: "#1c1c1c",
-      NewsBoxShadow2: "#282828",
     },
+  },
+  ErrorPage: {
+    background: "#222",
+    color: "#CACACA",
   },
 };

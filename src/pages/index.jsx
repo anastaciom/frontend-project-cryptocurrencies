@@ -12,6 +12,8 @@ import ResetPasswordPage from "./ResetPassword";
 import ProfileArea from "../components/dashboard/ProfileArea";
 import FavoritesArea from "../components/dashboard/FavoritesArea";
 import SettingsArea from "../components/dashboard/SettingsArea";
+import PageNotFound from "./ErrorsPage/PageNotFound";
+import RouteNotAuthorizated from "./ErrorsPage/RouteNotAuthorizated";
 
 export default function AppRoutes() {
   function PrivateRoute() {
@@ -30,14 +32,13 @@ export default function AppRoutes() {
       return <DashboardPage />;
     }
     if (!loading && !isAuthenticated) {
-      return <h1>error....</h1>;
-      // 3min later redirect '/'
+      return <RouteNotAuthorizated/>
     }
   }
 
   return (
     <Routes>
-      <Route path="*" element={<h1>Opsss.....</h1>} />
+      <Route path="*" element={<PageNotFound/>}/>
       <Route path="/" element={<HomePage />} />
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/signin/forgot_password" element={<ForgotPasswordPage />} />

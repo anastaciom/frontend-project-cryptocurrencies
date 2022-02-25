@@ -11,7 +11,7 @@ export default function SearchArea({ setSearchCrypto }) {
         onChange={(e) => setSearchCrypto(e.target.value)}
       />
       <span>
-        <Search />
+        <Search style={{ color: "#432A78" }} />
       </span>
     </SearchStyle>
   );
