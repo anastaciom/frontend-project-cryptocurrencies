@@ -14,6 +14,7 @@ import FavoritesArea from "../components/dashboard/FavoritesArea";
 import SettingsArea from "../components/dashboard/SettingsArea";
 import PageNotFound from "./ErrorsPage/PageNotFound";
 import RouteNotAuthorizated from "./ErrorsPage/RouteNotAuthorizated";
+import Loading from "./LoadingPage";
 
 export default function AppRoutes() {
   function PrivateRoute() {
@@ -26,19 +27,19 @@ export default function AppRoutes() {
     }, [dispatch]);
 
     if (loading) {
-      return <h1>loading....</h1>;
+      return <Loading loading={loading}/>
     }
     if (!loading && !error && isAuthenticated) {
       return <DashboardPage />;
     }
     if (!loading && !isAuthenticated) {
-      return <RouteNotAuthorizated/>
+      return <RouteNotAuthorizated />;
     }
   }
 
   return (
     <Routes>
-      <Route path="*" element={<PageNotFound/>}/>
+      <Route path="*" element={<PageNotFound />} />
       <Route path="/" element={<HomePage />} />
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/signin/forgot_password" element={<ForgotPasswordPage />} />
@@ -47,8 +48,8 @@ export default function AppRoutes() {
       <Route path="/dashboard/" element={<PrivateRoute />}>
         <Route path="" element={<Navigate to="/dashboard/profile" />} />
         <Route path="profile" element={<ProfileArea />} />
-        <Route path="favorites" element={<FavoritesArea/>} />
-        <Route path="settings" element={<SettingsArea/>} />
+        <Route path="favorites" element={<FavoritesArea />} />
+        <Route path="settings" element={<SettingsArea />} />
       </Route>
     </Routes>
   );
