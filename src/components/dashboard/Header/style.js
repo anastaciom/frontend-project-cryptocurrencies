@@ -84,9 +84,9 @@ export const BoxLogoutStyle = styled.div`
   height: 60px;
   right: 4%;
   border-radius: 0px 0px 8px 8px;
-  background: ${(props) => props.theme.dashboard.colors.background};
+  background: ${(props) => props.theme.BoxHeader.background};
   box-shadow: 0px 5px 0px ${(props) => props.theme.dashboard.colors.boxShadow1},
-    0px -5px 0px ${(props) => props.theme.dashboard.colors.background};
+    0px -5px 0px ${(props) => props.theme.BoxHeader.background};
   border-left: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
   border-right: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
   display: flex;
@@ -122,9 +122,9 @@ export const BoxNotificationsStyle = styled.div`
   height: 300px;
   right: 5%;
   border-radius: 0px 0px 8px 8px;
-  background: ${(props) => props.theme.dashboard.colors.background};
+  background: ${(props) => props.theme.BoxHeader.background};
   box-shadow: 0px 5px 0px ${(props) => props.theme.dashboard.colors.boxShadow1},
-    0px -5px 0px ${(props) => props.theme.dashboard.colors.background};
+    0px -5px 0px ${(props) => props.theme.BoxHeader.background};
   border-left: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
   border-right: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
   z-index: 900;

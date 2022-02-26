@@ -1,7 +1,7 @@
 import React from "react";
 import { BoxLogoutStyle } from "./style";
 import { useDispatch } from "react-redux";
-import { logout } from "../../../../redux/actions/logout.actions";
+import { logout } from "../../../redux/actions/logout.actions";
 import { Logout } from "@mui/icons-material/";
 export default function BoxLogout() {
   const dispatch = useDispatch();

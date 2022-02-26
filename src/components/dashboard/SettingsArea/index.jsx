@@ -1,7 +1,13 @@
-import React from 'react'
+import React from "react";
+import Header from "./Header";
+import Settings from "./Settings";
+import { SettingsAreaStyle } from "./style";
 
 export default function SettingsArea() {
   return (
-    <div>settingsss areaaa</div>
-  )
+    <SettingsAreaStyle>
+      <Header />
+      <Settings />
+    </SettingsAreaStyle>
+  );
 }

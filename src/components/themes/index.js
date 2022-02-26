@@ -43,6 +43,17 @@ export const ThemeLight = {
     background: "#F7F7F7",
     color: "#432A78",
   },
+  BoxHeader: {
+    background: "#f7f7f7",
+  },
+  SettingsArea: {
+    colors: {
+      borderColor: "#545454",
+      overflowYColor1: "#eaeaea",
+      overflowYColor2: "#545454",
+      color: "#545454",
+    },
+  },
 };
 
 export const ThemeDark = {
@@ -89,5 +100,16 @@ export const ThemeDark = {
   ErrorPage: {
     background: "#222",
     color: "#CACACA",
+  },
+  BoxHeader: {
+    background: "#282828",
+  },
+  SettingsArea: {
+    colors: {
+      borderColor: "#cacaca",
+      overflowYColor1: "#2c2c2c",
+      overflowYColor2: "#cacaca",
+      color: "#cacaca",
+    },
   },
 };

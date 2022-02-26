@@ -5,13 +5,12 @@ import { ThemeDark, ThemeLight } from "./components/themes";
 import UsePersistedTheme from "./utils/UsePersistedTheme";
 import AppRoutes from "./pages";
 
-
 function App() {
-  const [theme, toggleTheme] = UsePersistedTheme("theme", "initialTheme");
+  const [theme, toggleTheme] = UsePersistedTheme("theme", "light");
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <ThemeProvider theme={theme === "light" ? ThemeLight : ThemeDark}>
-        <AppRoutes/>
+        <AppRoutes />
       </ThemeProvider>
     </ThemeContext.Provider>
   );
