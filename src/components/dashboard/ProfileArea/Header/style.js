@@ -6,6 +6,8 @@ export const HeaderStyle = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  user-select: none;
+  z-index: 999;
 `;
 
 export const SearchStyle = styled.div`
@@ -73,4 +75,61 @@ export const NotificationAreaStyle = styled.div`
       transform: scale(0.9);
     }
   }
+`;
+
+export const BoxLogoutStyle = styled.div`
+  width: 200px;
+  position: absolute;
+  top: 70px;
+  height: 60px;
+  right: 4%;
+  border-radius: 0px 0px 8px 8px;
+  background: ${(props) => props.theme.dashboard.colors.background};
+  box-shadow: 0px 5px 0px ${(props) => props.theme.dashboard.colors.boxShadow1},
+    0px -5px 0px ${(props) => props.theme.dashboard.colors.background};
+  border-left: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
+  border-right: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+
+  button {
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #f95c5c;
+
+    &:active {
+      transition: all ease-in 0.1s;
+      transform: scale(0.9);
+    }
+  }
+`;
+
+export const BoxNotificationsStyle = styled.div`
+  width: 250px;
+  position: absolute;
+  top: 70px;
+  height: 300px;
+  right: 5%;
+  border-radius: 0px 0px 8px 8px;
+  background: ${(props) => props.theme.dashboard.colors.background};
+  box-shadow: 0px 5px 0px ${(props) => props.theme.dashboard.colors.boxShadow1},
+    0px -5px 0px ${(props) => props.theme.dashboard.colors.background};
+  border-left: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
+  border-right: 3px solid ${(props) => props.theme.dashboard.colors.boxShadow1};
+  z-index: 900;
+  color: ${(props) => props.theme.dashboard.colors.NotificationMenuText};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

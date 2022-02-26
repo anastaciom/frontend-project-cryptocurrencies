@@ -5,13 +5,15 @@ import { authReducer} from '../reducers/auth.reducer';
 import { forgotPasswordReducer } from "../reducers/forgetPassword.reducer";
 import { resetPasswordReducer } from "../reducers/resetPassword.reducer";
 import thunk from 'redux-thunk'
+import { logoutReducer } from "../reducers/logout.reducer";
 
 const rootReducer = combineReducers({
    signUp: signUpReducer,
    signIn: signInReducer,
    auth: authReducer,
    forgotPassword : forgotPasswordReducer,
-   resetPassword: resetPasswordReducer
+   resetPassword: resetPasswordReducer,
+   logout: logoutReducer,
 })
 const store = createStore(rootReducer, applyMiddleware(thunk))
 export default store

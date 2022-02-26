@@ -9,5 +9,6 @@ export const InfoUserStyle = styled.section`
   justify-content: flex-start;
   padding-left: 100px;
   font-weight: 500;
+  user-select: none;
   color: ${(props) => props.theme.dashboard.colors.InfoUserText};
 `;
