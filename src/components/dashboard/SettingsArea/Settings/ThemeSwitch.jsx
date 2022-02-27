@@ -1,17 +1,20 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ThemeSwitchStyle } from "./style";
-import { ThemeContext } from "../../../../contexts/ThemeContext";
-import UsePersistedTheme from "../../../../utils/UsePersistedTheme";
+import { useDispatch, useSelector } from "react-redux";
 import Switch from "react-switch";
+import { theme } from "../../../../redux/actions/theme.actions";
 
 export default function ThemeSwitch() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  UsePersistedTheme("theme", theme);
+  const actualTheme = useSelector((state) => state.theme.theme);
+  const dispatch = useDispatch();
+
   return (
     <ThemeSwitchStyle>
       <Switch
-        onChange={() => toggleTheme(theme === "light" ? "dark" : "light")}
-        checked={theme === "dark"}
+        onChange={() => actualTheme === "light"
+        ? dispatch(theme("dark"))
+        : dispatch(theme("light"))}
+        checked={actualTheme === "dark"}
         checkedIcon={false}
         uncheckedIcon={false}
         height={20}

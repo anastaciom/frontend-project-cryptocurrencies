@@ -1,20 +1,27 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ThemeSwitchStyle } from "./style";
-import { ThemeContext } from "../../contexts/ThemeContext";
 import { DarkMode, LightMode } from "@mui/icons-material/";
-import UsePersistedTheme from "../../utils/UsePersistedTheme";
+import { useDispatch, useSelector } from "react-redux";
+import { theme } from "../../redux/actions/theme.actions";
 
 export default function SwitchTheme() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  UsePersistedTheme("theme", theme);
+  const dispatch = useDispatch();
+  const actualTheme = useSelector((state) => state.theme.theme);
+
   return (
     <ThemeSwitchStyle
-      onClick={() => toggleTheme(theme === "light" ? "dark" : "light")}
+      onClick={() =>
+        actualTheme === "light"
+          ? dispatch(theme("dark"))
+          : dispatch(theme("light"))
+      }
     >
-      {theme === "light" ? (
+      {actualTheme === "light" ? (
         <DarkMode style={{ color: "#432a78" }} />
-      ) : (
+      ) : actualTheme === "dark" ? (
         <LightMode style={{ color: "yellow" }} />
+      ) : (
+        ""
       )}
     </ThemeSwitchStyle>
   );

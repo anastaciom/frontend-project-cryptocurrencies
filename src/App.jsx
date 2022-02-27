@@ -1,18 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
-import { ThemeContext } from "./contexts/ThemeContext";
-import { ThemeDark, ThemeLight } from "./components/themes";
-import UsePersistedTheme from "./utils/UsePersistedTheme";
+import { ThemeLight, ThemeDark } from "./components/themes";
 import AppRoutes from "./pages";
 
 function App() {
-  const [theme, toggleTheme] = UsePersistedTheme("theme", "light");
+  const {theme} = useSelector((state) => state.theme);
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <ThemeProvider theme={theme === "light" ? ThemeLight : ThemeDark}>
-        <AppRoutes />
-      </ThemeProvider>
-    </ThemeContext.Provider>
+    <ThemeProvider
+      theme={theme === "light" ? ThemeLight : theme === "dark" ? ThemeDark : ""}
+    >
+      <AppRoutes />
+    </ThemeProvider>
   );
 }
 
