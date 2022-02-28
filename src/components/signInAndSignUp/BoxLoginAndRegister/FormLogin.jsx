@@ -25,7 +25,7 @@ export default function FormLogin({ title }) {
   };
 
   return (
-    <form method="post" onSubmit={handleSubmit}>
+    <form method="post" onSubmit={handleSubmit} autoComplete="off">
       <input
         style={{
           border: error ? "2px solid red" : "",

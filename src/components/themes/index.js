@@ -54,6 +54,15 @@ export const ThemeLight = {
       color: "#545454",
     },
   },
+
+  ForgotPage: {
+    background: "#F7F7F7",
+    color: "#432A78",
+  },
+  ResetPage: {
+    background: "#F7F7F7",
+    color: "#432A78",
+  },
 };
 
 export const ThemeDark = {
@@ -111,5 +120,14 @@ export const ThemeDark = {
       overflowYColor2: "#cacaca",
       color: "#cacaca",
     },
+  },
+
+  ForgotPage: {
+    background: "#222",
+    color: "#CACACA",
+  },
+  ResetPage: {
+    background: "#222",
+    color: "#CACACA",
   },
 };

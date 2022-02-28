@@ -7,7 +7,6 @@ export const BoxLoginAndRegisterStyle = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;

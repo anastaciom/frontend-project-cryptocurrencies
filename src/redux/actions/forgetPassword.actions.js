@@ -2,7 +2,7 @@ import api from "../../services/api";
 
 export const forgetPassword = (email) => async (dispatch) => {
   dispatch({
-    type: "SEND_TOKEN", 
+    type: "SEND_TOKEN",
   });
 
   try {
@@ -13,11 +13,12 @@ export const forgetPassword = (email) => async (dispatch) => {
       payload: response.data.status,
     });
 
+    window.location.href = "/signin/reset_password";
     
   } catch (error) {
     dispatch({
       type: "SEND_TOKEN_FAILURE",
-      error : error.response.data.error,
+      error: error.response.data.error,
     });
   }
 };

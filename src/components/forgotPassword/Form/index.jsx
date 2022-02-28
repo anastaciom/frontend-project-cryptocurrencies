@@ -1,26 +1,28 @@
 import React, { useState } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { forgetPassword } from "../../../redux/actions/forgetPassword.actions";
+import {FormStyle} from './style'
+
 export default function Form() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(forgetPassword({email}));
-    setEmail("");;
+    dispatch(forgetPassword({ email }));
   };
 
   return (
-    <form method="post" onSubmit={handleSubmit}>
-      <input
-        type="email"
-        placeholder="Your E-mail"
-        name="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button type="submit">Create new password</button>
-    </form>
+      <FormStyle method="post" onSubmit={handleSubmit} autoComplete="off">
+        <input
+          type="email"
+          placeholder="Your E-mail"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button type="submit">Done</button>
+      </FormStyle>
+   
   );
 }

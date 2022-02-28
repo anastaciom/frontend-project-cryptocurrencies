@@ -13,6 +13,8 @@ export const resetPassword = (user) => async (dispatch) => {
       payload: response.data.status,
     });
     
+    window.location.href = "/signin/";
+
   } catch (error) {
     dispatch({
       type: "RECEIVE_NEW_PASSWORD_FAILURE",
