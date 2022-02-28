@@ -3,7 +3,7 @@ import { BoxLoginAndRegisterStyle } from "./style";
 import FormLogin from "./FormLogin";
 import FormRegister from "./FormRegister";
 import { Link } from "react-router-dom";
-export default function BoxLogin({ title, link }) {
+export default function BoxLoginAndRegister({ title, link }) {
   return (
     <BoxLoginAndRegisterStyle>
       <h1>{title}</h1>

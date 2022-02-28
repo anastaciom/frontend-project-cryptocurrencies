@@ -13,7 +13,7 @@ export default function Form() {
   };
 
   return (
-      <FormStyle method="post" onSubmit={handleSubmit} autoComplete="off">
+      <FormStyle method="post" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Your E-mail"

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { resetPassword } from "../../../redux/actions/resetPassword.actions";
-import {BoxResetPasswordStyle} from './style'
-
+import { BoxResetPasswordStyle } from "./style";
 
 export default function Form() {
   const dispatch = useDispatch();
@@ -21,8 +20,9 @@ export default function Form() {
   return (
     <BoxResetPasswordStyle>
       <h1>Reset Password</h1>
-      <form method="post" onSubmit={handleSubmit} autoComplete="off">
+      <form method="post" onSubmit={handleSubmit}>
         <input
+          autoComplete="off"
           type="text"
           placeholder="Token"
           value={token}

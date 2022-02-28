@@ -11,7 +11,7 @@ export default function Description() {
           Inform the E-mail that is registered on the platform. Make sure it's
           spelled correctly!!
         </li>
-        <li>Click "Create New Password"</li>
+        <li>Click "Done"</li>
         <li>
           In a few seconds, you will receive a token in your email. (remembering
           that the token expires in 1 hour)

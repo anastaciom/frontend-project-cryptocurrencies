@@ -27,7 +27,7 @@ export default function FormRegister({ title }) {
   };
 
   return (
-    <form method="post" onSubmit={handleSubmit} autoComplete="off">
+    <form method="post" onSubmit={handleSubmit}>
       <input
         style={{
           border:
