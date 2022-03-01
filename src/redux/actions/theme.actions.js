@@ -1,8 +1,6 @@
-export const theme = (theme) => async (dispatch) => { 
-    dispatch({
-      type: "THEME",
-      payload: theme,
-    });
-  
-  };
-  
+export const theme = (theme) => (dispatch) => {
+  dispatch({
+    type: "THEME",
+    payload: theme,
+  });
+};

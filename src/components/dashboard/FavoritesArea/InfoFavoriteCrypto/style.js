@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InfoCryptoStyle = styled.section`
+export const InfoFavoriteCryptoStyle = styled.section`
   width: 100%;
   height: 60%;
   display: flex;
@@ -8,7 +8,7 @@ export const InfoCryptoStyle = styled.section`
   justify-content: center;
 `;
 
-export const CryptoDataStyle = styled.div`
+export const FavoriteCryptoStyle = styled.div`
   height: 100%;
   width: 90%;
   overflow-y: auto;
@@ -69,3 +69,15 @@ export const FavoriteBtnStyle = styled.span`
     transition: all ease-in-out 0.2s;
   }
 `;
+
+export const EmptyFavoritesStyle = styled.span `
+font-size: 30px;
+text-transform: capitalize;
+font-weight: 500;
+width: 100%;
+height: 100%;
+display:flex;
+align-items:flex-start;
+justify-content:center;
+color: ${(props) => props.theme.dashboard.colors.InfoUserText};
+`

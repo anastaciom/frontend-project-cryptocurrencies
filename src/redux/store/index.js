@@ -7,6 +7,7 @@ import { resetPasswordReducer } from "../reducers/resetPassword.reducer";
 import thunk from "redux-thunk";
 import { logoutReducer } from "../reducers/logout.reducer";
 import { themeReducer } from "../reducers/theme.reducer";
+import { favoriteCryptoReducer } from "../reducers/favoriteCrypto.reducer";
 
 const rootReducer = combineReducers({
   signUp: signUpReducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   resetPassword: resetPasswordReducer,
   logout: logoutReducer,
   theme: themeReducer,
+  favorites: favoriteCryptoReducer,
 });
 const store = createStore(rootReducer, applyMiddleware(thunk));
 

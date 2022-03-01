@@ -1,32 +1,27 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { CryptoDataStyle } from "./style";
-import FavoriteBtn from "./FavoriteBtn";
-export default function CryptoData({ searchCrypto }) {
-  const state = useSelector((state) => state.auth.data.data);
-  const search = state.filter(
-    (crypto) =>
-      crypto.id.includes(searchCrypto) ||
-      crypto.name.includes(searchCrypto) ||
-      crypto.symbol.includes(searchCrypto)
-  );
+import { FavoriteCryptoStyle,  EmptyFavoritesStyle} from "./style";
+export default function FavoriteCrypto() {
+  const { favorites } = useSelector((state) => state.favorites);
+ 
   return (
-    <CryptoDataStyle>
-      <table>
-        <tbody>
-          <tr>
-            <th>Token</th>
-            <th>Symbol</th>
-            <th>Price</th>
-            <th>24H</th>
-            <th>Market Cap</th>
-          </tr>
+    <FavoriteCryptoStyle>
+      {favorites.length === 0 ? (
+        <EmptyFavoritesStyle>Empty favorites...</EmptyFavoritesStyle>
+      ) : (
+        <table>
+          <tbody>
+            <tr>
+              <th>Token</th>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>24H</th>
+              <th>Market Cap</th>
+            </tr>
 
-          {search.map((crypto) => {
-            return (
+            {favorites.map((crypto) => (
               <tr key={crypto.id}>
                 <td>
-                  <FavoriteBtn favCrypto={crypto}/>
                   <img src={crypto.image} alt={crypto.id} />
                   <h1>{crypto.name}</h1>
                 </td>
@@ -54,10 +49,10 @@ export default function CryptoData({ searchCrypto }) {
                   })}
                 </td>
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </CryptoDataStyle>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </FavoriteCryptoStyle>
   );
 }
