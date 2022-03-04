@@ -7,12 +7,16 @@ import { resetPasswordReducer } from "../reducers/resetPassword.reducer";
 import thunk from "redux-thunk";
 import { logoutReducer } from "../reducers/logout.reducer";
 import { themeReducer } from "../reducers/theme.reducer";
+import { signInAdminReducer } from "../reducers/signInAdmin.reducer";
+import { authAdminReducer } from "../reducers/authAdmin.reducer";
 import { favoriteCryptoReducer } from "../reducers/favoriteCrypto.reducer";
 
 const rootReducer = combineReducers({
   signUp: signUpReducer,
   signIn: signInReducer,
+  signInAdmin: signInAdminReducer,
   auth: authReducer,
+  authAdmin: authAdminReducer,
   forgotPassword: forgotPasswordReducer,
   resetPassword: resetPasswordReducer,
   logout: logoutReducer,

@@ -6,6 +6,7 @@ import SignInPage from "./SignInPage";
 import SignUpPage from "./SignUpPage";
 import DashboardPage from "./DashboardPage";
 import { auth } from "../redux/actions/auth.actions";
+import { authAdmin } from "../redux/actions/authAdmin.actions";
 import { useDispatch } from "react-redux";
 import ForgotPasswordPage from "./ForgotPassword";
 import ResetPasswordPage from "./ResetPassword";
@@ -15,6 +16,8 @@ import SettingsArea from "../components/dashboard/SettingsArea";
 import PageNotFound from "./ErrorsPage/PageNotFound";
 import RouteNotAuthorizated from "./ErrorsPage/RouteNotAuthorizated";
 import Loading from "./LoadingPage";
+import SignInAdmin from "./SignInAdminPage";
+import DashboardAdminPage from "./DashboardAdminPage";
 
 export default function AppRoutes() {
   function PrivateRoute() {
@@ -37,6 +40,28 @@ export default function AppRoutes() {
     }
   }
 
+
+  function AdminRoute() {
+    const dispatch = useDispatch();
+    const { isAdmin, loading, error } = useSelector(
+      (state) => state.authAdmin
+    );
+    useEffect(() => {
+      dispatch(authAdmin());
+    }, [dispatch]);
+
+    if (loading) {
+      return <Loading loading={loading}/>
+    }
+    if (!loading && !error && isAdmin) {
+      return <DashboardAdminPage/>;
+    }
+    if (!loading && !isAdmin) {
+      return <RouteNotAuthorizated />;
+    }
+  }
+
+
   return (
     <Routes>
       <Route path="*" element={<PageNotFound />} />
@@ -51,6 +76,8 @@ export default function AppRoutes() {
         <Route path="favorites" element={<FavoritesArea />} />
         <Route path="settings" element={<SettingsArea />} />
       </Route>
+      <Route path="/admin" element={<SignInAdmin/>}/>
+      <Route path="/admin/dashboard" element={<AdminRoute/>} />
     </Routes>
   );
 }
