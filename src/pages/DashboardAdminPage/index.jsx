@@ -1,13 +1,12 @@
 import React from "react";
-import { ContainerStyle } from "./index.style";
-import { useSelector } from "react-redux";
+import { DashboardStyle} from "./index.style";
+import { Outlet } from "react-router-dom";
+import SideBar from '../../components/dashboardAdmin/SideBar'
 export default function DashboardAdminPage() {
-  const { users } = useSelector((state) => state.authAdmin);
   return (
-    <ContainerStyle>
-      {users.map((user, index) => (
-        <li key={index}>{user.email}</li>
-      ))}
-    </ContainerStyle>
+    <DashboardStyle>
+      <SideBar/>
+      <Outlet/>
+    </DashboardStyle>
   );
 }

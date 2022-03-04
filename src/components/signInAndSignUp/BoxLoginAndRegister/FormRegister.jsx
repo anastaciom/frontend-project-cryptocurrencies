@@ -40,7 +40,7 @@ export default function FormRegister({ title }) {
         onChange={(e) => setName(e.target.value)}
       />
       {error === "Name minimum is 3 characters" ? (
-        <small style={{ color: "red" }}>{error}</small>
+        <small style={{ color: "red", fontWeight: "bold" }}>{error}</small>
       ) : (
         ""
       )}
@@ -61,9 +61,9 @@ export default function FormRegister({ title }) {
         onChange={(e) => setEmail(e.target.value)}
       />
       {error === "Email minimum is 4 characters" ? (
-        <small style={{ color: "red" }}>{error}</small>
+        <small style={{ color: "red", fontWeight: "bold" }}>{error}</small>
       ) : error === "User already exists." ? (
-        <small style={{ color: "red" }}>{error}</small>
+        <small style={{ color: "red", fontWeight: "bold" }}>{error}</small>
       ) : (
         ""
       )}
@@ -79,7 +79,7 @@ export default function FormRegister({ title }) {
         onChange={(e) => setPassword(e.target.value)}
       />
       {error === "Password minimum is 6 characters" ? (
-        <small style={{ color: "red" }}>{error}</small>
+        <small style={{ color: "red", fontWeight: "bold" }}>{error}</small>
       ) : (
         ""
       )}

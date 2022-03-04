@@ -37,6 +37,12 @@ export const ThemeLight = {
       InfoUserText: "#545454",
       TableText: "#545454",
       TableHeaderBG: "#eaeaea",
+
+      BoxUserBG: "#dedede",
+      BoxUserText: "#545454",
+      BoxUserTextTitle: "#424242",
+      BoxUserShadow1: "#c6c6c6",
+      BoxUserShadow2: "#f6f6f6",
     },
   },
   ErrorPage: {
@@ -104,6 +110,11 @@ export const ThemeDark = {
       InfoUserText: "#cacaca",
       TableText: "#cacaca",
       TableHeaderBG: "#2c2c2c",
+      BoxUserBG: "#121212",
+      BoxUserTextTitle: "#cacaca",
+      BoxUserText: "#828282",
+      BoxUserShadow1: "#101010",
+      BoxUserShadow2: "#141414",
     },
   },
   ErrorPage: {

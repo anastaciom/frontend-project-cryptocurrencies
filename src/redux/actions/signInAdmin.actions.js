@@ -17,7 +17,7 @@ export const signInAdmin = (user) => async (dispatch) => {
       payload: response.data.token,
     });
 
-    window.location.href = "admin/dashboard";
+    window.location.href = "admin/dashboard/allUsers";
   } catch (error) {
     dispatch({
       type: "SIGN_IN_ADMIN_FAILURE",

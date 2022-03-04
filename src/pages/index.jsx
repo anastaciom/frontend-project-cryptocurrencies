@@ -13,6 +13,8 @@ import ResetPasswordPage from "./ResetPassword";
 import ProfileArea from "../components/dashboard/ProfileArea";
 import FavoritesArea from "../components/dashboard/FavoritesArea";
 import SettingsArea from "../components/dashboard/SettingsArea";
+import SettingsAreaAdmin from "../components/dashboardAdmin/SettingsAreaAdmin";
+import AllUsersArea from "../components/dashboardAdmin/AllUsersArea";
 import PageNotFound from "./ErrorsPage/PageNotFound";
 import RouteNotAuthorizated from "./ErrorsPage/RouteNotAuthorizated";
 import Loading from "./LoadingPage";
@@ -77,7 +79,13 @@ export default function AppRoutes() {
         <Route path="settings" element={<SettingsArea />} />
       </Route>
       <Route path="/admin" element={<SignInAdmin/>}/>
-      <Route path="/admin/dashboard" element={<AdminRoute/>} />
+
+      <Route path="/admin/dashboard/" element={<AdminRoute/>}>
+      <Route path="" element={<Navigate to="/admin/dashboard/allusers" />} />
+        <Route path="allusers" element={<AllUsersArea/>} />
+        <Route path="settings" element={<SettingsAreaAdmin />} />
+        </Route>
+
     </Routes>
   );
 }

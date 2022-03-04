@@ -53,7 +53,11 @@ export default function FormLogin({ title }) {
           <Visibility style={{ color: "#797979", fontSize: 20 }} />
         )}
       </BtnShowPasswordLoginStyle>
-      {error ? <small>{error}</small> : ""}
+      {error ? (
+        <small style={{ color: "red", fontWeight: "bold" }}>{error}</small>
+      ) : (
+        ""
+      )}
       <button type="submit">{title}</button>
     </form>
   );
