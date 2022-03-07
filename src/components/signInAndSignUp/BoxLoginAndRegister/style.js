@@ -48,17 +48,16 @@ export const BoxLoginAndRegisterStyle = styled.div`
   }
 
   a {
-      margin-top: -20px;
-      color: ${(props) => props.theme.BoxLoginAndRegister.text};
-      font-weight: 500;
-      letter-spacing: 1px;
-      &:hover,
-      &:active {
-        color: #6a00ff;
-        transition: 0.2s all ease-in-out;
-      }
+    margin-top: -20px;
+    color: ${(props) => props.theme.BoxLoginAndRegister.text};
+    font-weight: 500;
+    letter-spacing: 1px;
+    &:hover,
+    &:active {
+      color: #6a00ff;
+      transition: 0.2s all ease-in-out;
     }
-
+  }
 
   form {
     width: inherit;
@@ -96,6 +95,37 @@ export const BoxLoginAndRegisterStyle = styled.div`
         background-color: ${(props) => props.theme.BoxLoginAndRegister.text};
         color: ${(props) => props.theme.BoxLoginAndRegister.btnBG};
         box-shadow: -1px -1px 18px 1px ${(props) => props.theme.BoxLoginAndRegister.text};
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 500px;
+    border-radius: 50px;
+    h1 {
+      font-size: 35px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 16px;
+      a {
+        text-decoration: none;
+        color: #6a00ff;
+      }
+    }
+
+    a {
+      margin-top: -30px;
+    }
+
+    form {
+      height: 50%;
+      input,
+      button {
+        width: 90%;
+      }
+      button {
+        font-size: 16px;
       }
     }
   }

@@ -19,4 +19,17 @@ export const DescriptionStyle = styled.div`
     padding: 8px;
     font-size: 18px;
   }
+
+  @media (max-width: 480px) {
+    width: 90%;
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      padding: 10px;
+      text-transform: capitalize;
+    }
+  }
 `;

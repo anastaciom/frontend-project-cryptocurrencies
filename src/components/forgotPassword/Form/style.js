@@ -48,4 +48,18 @@ export const FormStyle = styled.form`
         box-shadow: -1px -1px 18px 1px ${(props) => props.theme.BoxLoginAndRegister.text};
       }
   }
+
+  @media (max-width: 480px) {
+  width: 80%;
+  height: 100px;
+  border-radius: 10px;
+
+  input,button {
+    width: 80%;
+    padding:8px;
+  }
+  button{
+    margin-top: 10px;
+  }
+  }
 `;

@@ -18,4 +18,11 @@ border-radius: 50px;
   background-color: rgba(192,192,192,0.3);
   transition: all ease-in-out 0.2s
 }
+
+@media (max-width: 480px) {
+left: 8px;
+top:15px;
+height:60%;
+width: 40px;
+  }
 `

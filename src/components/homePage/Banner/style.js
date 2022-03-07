@@ -7,7 +7,7 @@ export const BannerStyle = styled.main`
   align-items: center;
   justify-content: center;
   user-select: none;
-  background-color: ${props=> props.theme.colors.backgroundBanner};
+  background-color: ${(props) => props.theme.colors.backgroundBanner};
 
   div {
     width: 50%;
@@ -25,18 +25,17 @@ export const BannerStyle = styled.main`
     animation: go-back 1.8s infinite alternate;
 
     @keyframes go-back {
-  from {
-   transform: scale(1.1) ;
-  };
-  to {
-    transform: scale(1.0); 
-  };
-}
+      from {
+        transform: scale(1.1);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+  }
 
-}
-    
   h1 {
-    color: ${props=> props.theme.colors.textBanner};
+    color: ${(props) => props.theme.colors.textBanner};
     font-size: 60px;
     font-weight: 500;
     letter-spacing: 3px;
@@ -45,7 +44,7 @@ export const BannerStyle = styled.main`
   }
   p {
     width: 80%;
-    color: ${props=> props.theme.colors.textBanner};
+    color: ${(props) => props.theme.colors.textBanner};
     text-align: justify;
     font-size: 30px;
     padding: 10px;
@@ -68,7 +67,7 @@ export const BannerStyle = styled.main`
 
     &:visited,
     &:link {
-      color:#cacaca;
+      color: #cacaca;
     }
     &:hover {
       background-color: #dadada;
@@ -82,6 +81,39 @@ export const BannerStyle = styled.main`
     &:active {
       background-color: #cacaca;
       color: #432a78;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    flex-direction:column-reverse;
+    div {
+      width: 100%;
+      height: 50%;
+    }
+
+    img {
+
+     margin-top:80px;
+      width: 90%;
+      height:inherit;
+    }
+
+    h1 {
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+    p {
+      width: 90%;
+      font-size: 20px;
+      padding: 8px;
+    }
+
+    a {
+      margin: 8px;
+      padding: 10px;
+      font-size: 15px;
+      width: 90%;
     }
   }
 `;

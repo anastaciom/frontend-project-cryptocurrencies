@@ -39,4 +39,25 @@ export const ContactStyle = styled.section`
       color: #6a00ff;
     }
   }
+
+  @media (max-width: 480px) {
+  width: 100%;
+  height: 600px;
+
+  h1 {
+    font-size: 30px;
+    margin-top: -10px;
+    letter-spacing: 2px;
+  }
+
+  div {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+  }
+
+  }
 `;

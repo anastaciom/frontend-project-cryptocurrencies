@@ -69,6 +69,26 @@ export const BoxLoginStyle = styled.div`
       }
     }
   }
+
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 500px;
+    border-radius: 50px;
+    h1 {
+      font-size: 35px;
+      letter-spacing: 2px;
+    }
+    form {
+      height: 50%;
+      input,
+      button {
+        width: 90%;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+  }
 `;
 
 export const BtnShowPasswordLoginStyle = styled.span`

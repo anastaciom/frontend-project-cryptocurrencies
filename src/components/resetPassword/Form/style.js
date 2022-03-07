@@ -25,7 +25,7 @@ export const BoxResetPasswordStyle = styled.div`
     text-transform: capitalize;
     color: ${(props) => props.theme.BoxLoginAndRegister.text};
   }
-  
+
   form {
     width: inherit;
     height: 60%;
@@ -62,6 +62,26 @@ export const BoxResetPasswordStyle = styled.div`
         background-color: ${(props) => props.theme.BoxLoginAndRegister.text};
         color: ${(props) => props.theme.BoxLoginAndRegister.btnBG};
         box-shadow: -1px -1px 18px 1px ${(props) => props.theme.BoxLoginAndRegister.text};
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 500px;
+    border-radius: 50px;
+    h1 {
+      font-size: 35px;
+      letter-spacing: 2px;
+    }
+    form {
+      height: 50%;
+      input,
+      button {
+        width: 90%;
+      }
+      button {
+        font-size: 16px;
       }
     }
   }
