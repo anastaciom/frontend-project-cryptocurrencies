@@ -10,7 +10,7 @@ export const SideBarStyle = styled.nav`
   justify-content: flex-start;
   flex-direction: column;
   position: relative;
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 20%;
   }
 `;
@@ -29,10 +29,15 @@ export const TitleStyle = styled.div`
     font-size: 40px;
     color: ${(props) => props.theme.dashboard.colors.textNavItems};
   }
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     h1 {
    display:none;
   }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    h1 {
+      display: none;
+    }
   }
 `;
 
@@ -81,9 +86,20 @@ export const NavItemsStyle = styled.ul`
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     list-style: none;
     width: 100%;
+    li{
+      a {
+      justify-content:center;
+      h4 {
+        display: none;
+      }
+    }
+    }
+  }
+
+  @media (min-width: 660px) and (max-width: 1023px) {
     li{
       a {
       justify-content:center;

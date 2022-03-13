@@ -10,14 +10,19 @@ export const SideBarStyle = styled.nav`
   justify-content: flex-start;
   flex-direction: column;
   position: relative;
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 20%;
   }
 `;
 
 export const ImglogoStyle = styled.div`
   padding: 20px 20px 40px;
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
+    img {
+      display: none;
+    }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
     img {
       display: none;
     }
@@ -68,11 +73,20 @@ export const NavItemsStyle = styled.ul`
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     list-style: none;
     width: 100%;
     li{
-     
+      a {
+      justify-content:center;
+      h4 {
+        display: none;
+      }
+    }
+    }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    li{
       a {
       justify-content:center;
       h4 {

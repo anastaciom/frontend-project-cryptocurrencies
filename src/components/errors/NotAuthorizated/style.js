@@ -46,7 +46,7 @@ export const ErrorStyle = styled.div`
     height: 100%;
     object-fit: contain;
   }
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) { 
     flex-direction: column-reverse;
     div {
       width: 100%;
@@ -58,6 +58,26 @@ export const ErrorStyle = styled.div`
       gap: 50px;
       h1 {
         font-size: 30px;
+      }
+    }
+    img {
+      width: 100%;
+      height: 50%;
+      object-fit: contain;
+    }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    flex-direction: column-reverse;
+    div {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      h1 {
+        font-size: 50px;
       }
     }
     img {

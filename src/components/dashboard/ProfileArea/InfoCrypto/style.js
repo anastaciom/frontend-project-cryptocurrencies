@@ -54,29 +54,51 @@ export const CryptoDataStyle = styled.div`
     }
     h1 {
       padding: 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    width: 95%;
-    overflow-x: auto;
-  th {
-    padding: 8px;
-    font-size: 12px;
-  }
-  td {
-    font-size: 11px;
-    padding:8px;
-    img {
-     display:none;
-    }
-    h1 {
-      text-align:center;
-      margin-left: 30px;
-      font-weight:bold;
+      font-weight: bold;
     }
   }
 
+  @media screen and (max-width: 660px) {
+    width: 95%;
+    overflow-x: auto;
+    th {
+      padding: 8px;
+      font-size: 12px;
+    }
+    td {
+      font-size: 11px;
+      padding: 8px;
+      img {
+        display: none;
+      }
+      h1 {
+        text-align: center;
+        margin-left: 30px;
+      }
+    }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    width: 95%;
+    overflow-x: auto;
+    th {
+      padding: 15px;
+      font-size: 16px;
+    }
+    td {
+      font-size: 14px;
+      img {
+        height: 40px;
+        width: 40px;
+        padding: 5px;
+        float: left;
+        margin-left: 10px;
+        object-fit: contain;
+      }
+      h1 {
+        padding: 15px;
+        font-size: 15px;
+      }
+    }
   }
 `;
 
@@ -90,11 +112,11 @@ export const FavoriteBtnStyle = styled.span`
     background-color: rgba(192, 192, 192, 0.3);
     transition: all ease-in-out 0.2s;
   }
-  @media (max-width: 480px) {
-   float: left;
-   font-size:5px;
-   padding: 5px;
-   margin:5px;
-  text-align:center;
+  @media screen and (max-width: 660px) {
+    float: left;
+    font-size: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
   }
 `;

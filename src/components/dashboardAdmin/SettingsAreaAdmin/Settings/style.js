@@ -56,7 +56,7 @@ export const SettingsStyle = styled.section`
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     padding: 20px;
     height: 85%;
     h1 {
@@ -76,6 +76,11 @@ export const SettingsStyle = styled.section`
       font-size: 18px;
     }
   }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    h1 {
+      font-size: 50px;
+    }
+  }
 `;
 
 export const ThemeSwitchStyle = styled.span`
@@ -93,7 +98,7 @@ export const ThemeSwitchStyle = styled.span`
   cursor: pointer;
   border-radius: 50px;
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     right: 1px;
   }
 `;

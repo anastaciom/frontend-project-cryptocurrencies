@@ -12,9 +12,16 @@ export const TitleStyle = styled.section`
   user-select: none;
   color: ${(props) => props.theme.dashboard.colors.InfoUserText};
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
   font-size: 40px;
   height: 20%;
   padding:20px;
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    font-size: 50px;
+    padding:50px;
+    align-items:flex-start  ;
+  justify-content: flex-start;
+  height: 20%;
   }
 `;

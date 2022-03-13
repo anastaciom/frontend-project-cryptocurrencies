@@ -35,7 +35,7 @@ export const AboutStyle = styled.section`
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     h1 {
       font-size: 30px;
       margin-top: -10px;
@@ -60,6 +60,35 @@ export const AboutStyle = styled.section`
       img {
         width : 200px;
         height : 200px;
+      }
+    }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+  h1 {
+    font-size: 40px;
+    margin-top: -50px;
+    letter-spacing: 2px;
+  }
+
+  div {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: inherit;
+      height: inherit;
+      padding:30px;
+      p {
+        width: 90%;
+        font-size: 20px;
+        line-height: 30px;
+        text-indent: 30px;
+        text-align:justify;
+        padding:20px
+      }
+
+      img {
+        width : 300px;
+        height : 300px;
       }
     }
   }

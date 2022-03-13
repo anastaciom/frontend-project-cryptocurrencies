@@ -34,7 +34,7 @@ export const ErrorStyle = styled.div`
       transform: scale(0.99);
     }
   }
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     h1 {
     font-size: 30px;
   }

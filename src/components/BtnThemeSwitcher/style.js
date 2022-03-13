@@ -19,10 +19,17 @@ border-radius: 50px;
   transition: all ease-in-out 0.2s
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 660px) {
 left: 8px;
 top:15px;
 height:60%;
 width: 40px;
-  }
+}
+
+@media (min-width: 660px) and (max-width: 1023px) {
+  left: 15px;
+top:18px;
+height:50%;
+width: 40px;
+}
 `

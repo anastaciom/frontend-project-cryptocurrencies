@@ -49,7 +49,7 @@ export const FormStyle = styled.form`
       }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) { 
   width: 80%;
   height: 150px;
   border-radius: 10px;
@@ -62,4 +62,18 @@ export const FormStyle = styled.form`
     margin-top: 10px;
   }
   }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    width: 50%;
+  height: 150px;
+  border-radius: 10px;
+
+  input,button {
+    width: 80%;
+    padding:8px;
+  }
+  button{
+    margin-top: 10px;
+  }
+  }
 `;
+

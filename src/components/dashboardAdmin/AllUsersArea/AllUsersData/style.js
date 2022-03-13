@@ -49,7 +49,7 @@ export const AllUsersDataStyle = styled.div`
       }
     }
   }
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     height: 85%;
     h1 {
       font-size: 40px;
@@ -68,6 +68,11 @@ export const AllUsersDataStyle = styled.div`
           }
         }
       }
+    }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    h1 {
+      font-size: 50px;
     }
   }
 `;

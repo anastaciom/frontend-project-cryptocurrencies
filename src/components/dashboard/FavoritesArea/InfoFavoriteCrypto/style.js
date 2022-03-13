@@ -6,7 +6,7 @@ export const InfoFavoriteCryptoStyle = styled.section`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     height: 65%;
   }
 `;
@@ -60,7 +60,7 @@ export const FavoriteCryptoStyle = styled.div`
     }
   }
   
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 95%;
     overflow-x: auto;
   th {
@@ -77,7 +77,29 @@ export const FavoriteCryptoStyle = styled.div`
       font-weight:bold;
     }
   }
-
+  }
+  @media (min-width: 660px) and (max-width: 768px) {
+    width: 95%;
+    overflow-x: auto;
+    th {
+      padding: 15px;
+      font-size: 16px;
+    }
+    td {
+      font-size: 14px;
+      img {
+        height: 40px;
+        width: 40px;
+        padding: 5px;
+        float: left;
+        margin-left: 10px;
+        object-fit: contain;
+      }
+      h1 {
+        padding: 15px;
+        font-size: 15px;
+      }
+    }
   }
 `;
 export const EmptyFavoritesStyle = styled.span`
@@ -91,9 +113,14 @@ align-items:flex-start;
 justify-content:center;
 color: ${(props) => props.theme.dashboard.colors.InfoUserText};
 
-@media (max-width: 480px) {
+@media screen and (max-width: 660px) {
   font-size: 18px;
   align-items:center;
+justify-content:center;
+  }
+
+  @media (min-width: 660px) and (max-width: 1023px) {
+    align-items:center;
 justify-content:center;
   }
 `

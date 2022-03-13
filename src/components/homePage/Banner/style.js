@@ -84,8 +84,7 @@ export const BannerStyle = styled.main`
     }
   }
 
-  @media (max-width: 480px) {
-
+  @media screen and (max-width: 660px) {
     flex-direction:column-reverse;
     div {
       width: 100%;
@@ -114,6 +113,37 @@ export const BannerStyle = styled.main`
       padding: 10px;
       font-size: 15px;
       width: 90%;
+    }
+  }
+
+  @media (min-width: 660px) and (max-width: 1023px) {
+    flex-direction:column-reverse;
+    div {
+      width: 100%;
+      height: 50%;
+    }
+
+    img {
+     margin-top:80px;
+      width: 90%;
+      height:inherit;
+    }
+
+    h1 {
+      font-size: 40px;
+      letter-spacing: 2px;
+    }
+    p {
+      width: 90%;
+      font-size: 30px;
+      padding: 8px;
+    }
+
+    a {
+      margin: 8px;
+      padding: 15px;
+      font-size: 18px;
+      width: 50%;
     }
   }
 `;

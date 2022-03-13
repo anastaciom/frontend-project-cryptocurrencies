@@ -98,7 +98,7 @@ export const BoxLoginAndRegisterStyle = styled.div`
       }
     }
   }
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 95%;
     height: 400px;
     border-radius: 30px;
@@ -137,7 +137,7 @@ export const BtnShowPasswordLoginStyle = styled.span`
   right: 60px;
   bottom: 242px;
   cursor: pointer;
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) { 
     right: 50px;
   bottom: 191px;
   }
@@ -149,7 +149,7 @@ export const BtnShowPasswordRegisterStyle = styled.span`
   bottom: 192px;
   cursor: pointer;
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     right: 50px;
   bottom: 149px;
   }

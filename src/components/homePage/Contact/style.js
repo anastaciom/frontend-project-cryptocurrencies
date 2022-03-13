@@ -40,7 +40,7 @@ export const ContactStyle = styled.section`
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
   width: 100%;
   height: 600px;
 
@@ -58,6 +58,13 @@ export const ContactStyle = styled.section`
     justify-content: center;
     flex-direction:column;
   }
+  }
 
+  @media (min-width: 660px) and (max-width: 1023px) {
+  h1 {
+    font-size: 40px;
+    margin-top: -50px;
+    letter-spacing: 2px;
+  }
   }
 `;

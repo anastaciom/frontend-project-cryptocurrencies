@@ -33,7 +33,7 @@ export const SearchStyle = styled.div`
     top: 20%;
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 45%;
     span {
       display: none;
@@ -83,7 +83,7 @@ export const NotificationAreaStyle = styled.div`
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 50%;
     justify-content: flex-end;
     span {
@@ -129,7 +129,7 @@ export const BoxLogoutStyle = styled.div`
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 100px;
   height: 60px;
   right: 1%;
@@ -158,7 +158,7 @@ export const BoxNotificationsStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     right: 1%;
   }
 `;

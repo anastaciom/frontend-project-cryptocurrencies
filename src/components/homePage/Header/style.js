@@ -12,12 +12,15 @@ export const HeaderStyle = styled.header`
   z-index: 1000;
   user-select: none;
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     justify-content: center;
     img {
       padding-right: 30px;
       padding-left: 30px;
     }
+  }
+  @media (min-width: 660px) and (max-width: 1023px) {
+    justify-content: space-evenly;
   }
 `;
 
@@ -84,7 +87,7 @@ export const HeaderItemsStyle = styled.div`
     display: none;
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     ul {
       display: none;
     }
@@ -113,6 +116,16 @@ export const HeaderItemsStyle = styled.div`
     }
   }
 
+  @media (min-width: 660px) and (max-width: 1023px) {
+    li {
+      font-size: 16px;
+    }
+
+    .btnSignIn {
+      padding: 8px;
+    }
+  }
+
   @keyframes showMenuMobile {
     from {
       height: 0vh;
@@ -125,7 +138,7 @@ export const HeaderItemsStyle = styled.div`
 
 export const BtnMenuMobileStyle = styled.div`
   display: none;
-  @media (max-width: 480px) {
+  @media screen and (max-width: 660px) {
     width: 40px;
     background-color: transparent;
     border-radius: 50px;
