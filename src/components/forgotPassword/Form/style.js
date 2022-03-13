@@ -51,7 +51,7 @@ export const FormStyle = styled.form`
 
   @media (max-width: 480px) {
   width: 80%;
-  height: 100px;
+  height: 150px;
   border-radius: 10px;
 
   input,button {

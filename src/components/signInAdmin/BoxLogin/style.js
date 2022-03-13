@@ -72,14 +72,15 @@ export const BoxLoginStyle = styled.div`
 
   @media (max-width: 480px) {
     width: 95%;
-    height: 500px;
-    border-radius: 50px;
+    height: 400px;
+    border-radius: 30px;
     h1 {
       font-size: 35px;
       letter-spacing: 2px;
     }
     form {
       height: 50%;
+      gap:10px;
       input,
       button {
         width: 90%;
@@ -96,4 +97,8 @@ export const BtnShowPasswordLoginStyle = styled.span`
   right: 60px;
   bottom: 190px;
   cursor: pointer;
+  @media (max-width: 480px) {
+    right: 50px;
+  bottom: 139px;
+  }
 `;

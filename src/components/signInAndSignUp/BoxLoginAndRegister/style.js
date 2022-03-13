@@ -100,14 +100,14 @@ export const BoxLoginAndRegisterStyle = styled.div`
   }
   @media (max-width: 480px) {
     width: 95%;
-    height: 500px;
-    border-radius: 50px;
+    height: 400px;
+    border-radius: 30px;
     h1 {
-      font-size: 35px;
+      font-size: 30px;
       letter-spacing: 2px;
     }
     p {
-      font-size: 16px;
+      font-size: 14px;
       a {
         text-decoration: none;
         color: #6a00ff;
@@ -120,6 +120,7 @@ export const BoxLoginAndRegisterStyle = styled.div`
 
     form {
       height: 50%;
+      gap: 10px;
       input,
       button {
         width: 90%;
@@ -134,8 +135,12 @@ export const BoxLoginAndRegisterStyle = styled.div`
 export const BtnShowPasswordLoginStyle = styled.span`
   position: absolute;
   right: 60px;
-  bottom: 243px;
+  bottom: 242px;
   cursor: pointer;
+  @media (max-width: 480px) {
+    right: 50px;
+  bottom: 191px;
+  }
 `;
 
 export const BtnShowPasswordRegisterStyle = styled.span`
@@ -143,4 +148,9 @@ export const BtnShowPasswordRegisterStyle = styled.span`
   right: 60px;
   bottom: 192px;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    right: 50px;
+  bottom: 149px;
+  }
 `;

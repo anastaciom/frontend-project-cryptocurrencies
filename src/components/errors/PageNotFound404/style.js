@@ -34,4 +34,9 @@ export const ErrorStyle = styled.div`
       transform: scale(0.99);
     }
   }
+  @media (max-width: 480px) {
+    h1 {
+    font-size: 30px;
+  }
+  }
 `;

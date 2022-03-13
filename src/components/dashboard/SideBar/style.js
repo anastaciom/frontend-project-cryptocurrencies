@@ -10,10 +10,18 @@ export const SideBarStyle = styled.nav`
   justify-content: flex-start;
   flex-direction: column;
   position: relative;
+  @media (max-width: 480px) {
+    width: 20%;
+  }
 `;
 
 export const ImglogoStyle = styled.div`
   padding: 20px 20px 40px;
+  @media (max-width: 480px) {
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const NavItemsStyle = styled.ul`
@@ -21,7 +29,6 @@ export const NavItemsStyle = styled.ul`
   width: 90%;
   li {
     margin: 10px 10px 20px;
-
     border-radius: 15px;
     cursor: pointer;
     background-color: ${(props) => props.theme.dashboard.colors.navItems};
@@ -41,6 +48,10 @@ export const NavItemsStyle = styled.ul`
       align-items: center;
       justify-content: flex-start;
       padding: 18px;
+      h4 {
+        font-weight: 500;
+        margin-left: 10px;
+      }
     }
     &:hover {
       transition: all ease-in 0.2s;
@@ -54,6 +65,20 @@ export const NavItemsStyle = styled.ul`
       transition: all ease-in 0.1s;
       transform: scale(0.99);
       color: ${(props) => props.theme.dashboard.colors.textNavItems};
+    }
+  }
+
+  @media (max-width: 480px) {
+    list-style: none;
+    width: 100%;
+    li{
+     
+      a {
+      justify-content:center;
+      h4 {
+        display: none;
+      }
+    }
     }
   }
 `;

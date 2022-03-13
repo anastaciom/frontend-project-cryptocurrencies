@@ -6,15 +6,15 @@ export default function NavItems() {
   return (
     <NavItemsStyle>
       <li>
-        <Link to="profile"><Dashboard style={{ marginRight: 10 }}/>Dashboard</Link>
+        <Link to="profile"><Dashboard /><h4>Dashboard</h4> </Link>
       </li>
       <li>
         
-        <Link to="favorites"><Star style={{ marginRight: 10 }}/>Favorites</Link>
+        <Link to="favorites"><Star/><h4>Favorites</h4></Link>
       </li>
       <li>
         
-        <Link to="settings"><Settings style={{ marginRight: 10 }} />Settings</Link>
+        <Link to="settings"><Settings/><h4>Settings</h4></Link>
       </li>
     </NavItemsStyle>
   );

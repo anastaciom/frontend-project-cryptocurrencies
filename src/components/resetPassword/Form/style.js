@@ -5,6 +5,7 @@ export const BoxResetPasswordStyle = styled.div`
   height: 500px;
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: space-around;
   flex-direction: column;
   border-radius: 50px;
@@ -68,14 +69,15 @@ export const BoxResetPasswordStyle = styled.div`
 
   @media (max-width: 480px) {
     width: 95%;
-    height: 500px;
+    height: 400px;
     border-radius: 50px;
     h1 {
-      font-size: 35px;
+      font-size: 30px;
       letter-spacing: 2px;
     }
     form {
       height: 50%;
+      gap: 10px;
       input,
       button {
         width: 90%;
@@ -84,5 +86,17 @@ export const BoxResetPasswordStyle = styled.div`
         font-size: 16px;
       }
     }
+  }
+`;
+
+export const BtnShowPasswordLoginStyle = styled.span`
+  position: absolute;
+  right: 60px;
+  bottom: 142px;
+  cursor: pointer;
+
+  @media (max-width: 480px) {
+    right: 50px;
+    bottom: 100px;
   }
 `;

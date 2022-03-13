@@ -32,6 +32,13 @@ export const SearchStyle = styled.div`
     right: 10px;
     top: 20%;
   }
+
+  @media (max-width: 480px) {
+    width: 45%;
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const NotificationAreaStyle = styled.div`
@@ -75,6 +82,14 @@ export const NotificationAreaStyle = styled.div`
       transform: scale(0.9);
     }
   }
+
+  @media (max-width: 480px) {
+    width: 50%;
+    justify-content: flex-end;
+    span {
+      margin-right: 8px;
+    }
+  }
 `;
 
 export const BoxLogoutStyle = styled.div`
@@ -113,6 +128,16 @@ export const BoxLogoutStyle = styled.div`
       transform: scale(0.9);
     }
   }
+  @media (max-width: 480px) {
+    width: 100px;
+  height: 60px;
+  right: 1%;
+  button {
+    padding: 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  }
 `;
 
 export const BoxNotificationsStyle = styled.div`
@@ -132,4 +157,7 @@ export const BoxNotificationsStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 480px) {
+    right: 1%;
+  }
 `;

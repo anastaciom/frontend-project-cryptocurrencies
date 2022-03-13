@@ -22,6 +22,7 @@ export const DescriptionStyle = styled.div`
 
   @media (max-width: 480px) {
     width: 90%;
+    padding-left: 8px;
     h1 {
       font-size: 20px;
     }

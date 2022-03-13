@@ -6,6 +6,9 @@ export const InfoFavoriteCryptoStyle = styled.section`
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  @media (max-width: 480px) {
+    height: 65%;
+  }
 `;
 
 export const FavoriteCryptoStyle = styled.div`
@@ -56,21 +59,28 @@ export const FavoriteCryptoStyle = styled.div`
       padding: 20px;
     }
   }
-`;
+  
+  @media (max-width: 480px) {
+    width: 95%;
+    overflow-x: auto;
+  th {
+    font-size: 12px;
+  }
+  td {
+    font-size: 11px;
+    img {
+     display:none;
+    }
+    h1 {
+      text-align:start;
+      margin-left: 0px;
+      font-weight:bold;
+    }
+  }
 
-export const FavoriteBtnStyle = styled.span`
-  float: left;
-  background-color: transparent;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 8px;
-  &:hover {
-    background-color: rgba(192, 192, 192, 0.3);
-    transition: all ease-in-out 0.2s;
   }
 `;
-
-export const EmptyFavoritesStyle = styled.span `
+export const EmptyFavoritesStyle = styled.span`
 font-size: 30px;
 text-transform: capitalize;
 font-weight: 500;
@@ -80,4 +90,10 @@ display:flex;
 align-items:flex-start;
 justify-content:center;
 color: ${(props) => props.theme.dashboard.colors.InfoUserText};
+
+@media (max-width: 480px) {
+  font-size: 18px;
+  align-items:center;
+justify-content:center;
+  }
 `

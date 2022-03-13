@@ -56,16 +56,45 @@ export const CryptoDataStyle = styled.div`
       padding: 20px;
     }
   }
+  
+  @media (max-width: 480px) {
+    width: 95%;
+    overflow-x: auto;
+  th {
+    padding: 8px;
+    font-size: 12px;
+  }
+  td {
+    font-size: 11px;
+    padding:8px;
+    img {
+     display:none;
+    }
+    h1 {
+      text-align:center;
+      margin-left: 30px;
+      font-weight:bold;
+    }
+  }
+
+  }
 `;
 
 export const FavoriteBtnStyle = styled.span`
   float: left;
   background-color: transparent;
   cursor: pointer;
-  border-radius: 50%;
-  padding: 8px;
+  border-radius: 50px;
+  padding: 9px;
   &:hover {
     background-color: rgba(192, 192, 192, 0.3);
     transition: all ease-in-out 0.2s;
+  }
+  @media (max-width: 480px) {
+   float: left;
+   font-size:5px;
+   padding: 5px;
+   margin:5px;
+  text-align:center;
   }
 `;

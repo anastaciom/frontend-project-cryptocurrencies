@@ -46,4 +46,24 @@ export const ErrorStyle = styled.div`
     height: 100%;
     object-fit: contain;
   }
+  @media (max-width: 480px) {
+    flex-direction: column-reverse;
+    div {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      h1 {
+        font-size: 30px;
+      }
+    }
+    img {
+      width: 100%;
+      height: 50%;
+      object-fit: contain;
+    }
+  }
 `;

@@ -10,7 +10,7 @@ export const AllUsersDataStyle = styled.div`
 
   h1 {
     padding: 30px;
-    font-size: 40px;
+    font-size: 70px;
     font-weight: 500;
     letter-spacing: 2px;
     color: ${(props) => props.theme.dashboard.colors.InfoUserText};
@@ -21,11 +21,15 @@ export const AllUsersDataStyle = styled.div`
     height: inherit;
     list-style: none;
     overflow-y: auto;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     li {
+      width: 90%;
+      height: auto;
       padding: 30px;
-      margin: 20px;
-      background-color: orange;
+      margin-bottom: 20px;
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -37,11 +41,32 @@ export const AllUsersDataStyle = styled.div`
         font-weight: bold;
         font-size: 20px;
         color: ${(props) => props.theme.dashboard.colors.BoxUserTextTitle};
+        small {
+          font-weight: 600;
+          font-size: 16px;
+          color: ${(props) => props.theme.dashboard.colors.BoxUserText};
+        }
       }
-      small {
-        font-weight: 600;
-        font-size: 16px;
-        color: ${(props) => props.theme.dashboard.colors.BoxUserText};
+    }
+  }
+  @media (max-width: 480px) {
+    height: 85%;
+    h1 {
+      font-size: 40px;
+    }
+    ul {
+      li {
+        padding: 20px;
+        p {
+          font-weight: bold;
+          font-size: 13px;
+          color: ${(props) => props.theme.dashboard.colors.BoxUserTextTitle};
+          small {
+            font-weight: 600;
+            font-size: 12px;
+            color: ${(props) => props.theme.dashboard.colors.BoxUserText};
+          }
+        }
       }
     }
   }

@@ -34,16 +34,11 @@ export default function FavoriteBtn({ favCrypto }) {
       {favorite ? (
         <Star
           style={{
-            fontSize: 30,
             color: "yellow",
           }}
         />
       ) : (
-        <StarBorder
-          style={{
-            fontSize: 30,
-          }}
-        />
+        <StarBorder/>
       )}
     </FavoriteBtnStyle>
   );

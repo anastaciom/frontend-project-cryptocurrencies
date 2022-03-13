@@ -6,10 +6,10 @@ export default function NavItems() {
   return (
     <NavItemsStyle>
       <li>
-        <Link to="allusers"><Dashboard style={{ marginRight: 10 }}/>Dashboard</Link>
+        <Link to="allusers"><Dashboard/><h4>Dashboard</h4></Link>
       </li>
       <li>
-        <Link to="settings"><Settings style={{ marginRight: 10 }} />Settings</Link>
+        <Link to="settings"><Settings/><h4>Settings</h4></Link>
       </li>
     </NavItemsStyle>
   );

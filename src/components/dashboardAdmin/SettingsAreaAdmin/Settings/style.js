@@ -55,6 +55,27 @@ export const SettingsStyle = styled.section`
         ${(props) => props.theme.SettingsArea.colors.borderColor};
     }
   }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    height: 85%;
+    h1 {
+      font-size: 40px;
+    }
+
+    ul {
+      width: 100%;
+      height: inherit;
+      list-style: none;
+      overflow-y: auto;
+      padding: 0px;
+    }
+
+    li {
+      padding: 30px;
+      font-size: 18px;
+    }
+  }
 `;
 
 export const ThemeSwitchStyle = styled.span`
@@ -71,4 +92,8 @@ export const ThemeSwitchStyle = styled.span`
   justify-content: center;
   cursor: pointer;
   border-radius: 50px;
+
+  @media (max-width: 480px) {
+    right: 1px;
+  }
 `;
