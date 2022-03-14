@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { HashRouter, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./HomePage";
 import { useSelector } from "react-redux";
 import SignInPage from "./SignInPage";
@@ -65,7 +65,7 @@ export default function AppRoutes() {
 
 
   return (
-    <HashRouter>
+    <Routes>
       <Route path="*" element={<PageNotFound />} />
       <Route path="/" element={<HomePage />} />
       <Route path="/signin" element={<SignInPage />} />
@@ -86,6 +86,6 @@ export default function AppRoutes() {
         <Route path="settings" element={<SettingsAreaAdmin />} />
         </Route>
 
-    </HashRouter>
+    </Routes>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import imgError from "../../assets/img404.png";
+import imgError from "../../../assets/img404.png";
 import {ErrorStyle}from './style'
 export default function PageNotFound404() {
   return (

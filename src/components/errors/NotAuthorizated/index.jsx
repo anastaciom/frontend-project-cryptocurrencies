@@ -1,5 +1,5 @@
 import React from "react";
-import imgError from "../../assets/notAuthorizated.png";
+import imgError from "../../../assets/notAuthorizated.png";
 import { ErrorStyle } from "./style";
 import { Link } from "react-router-dom";
 export default function NotAuthorizated() {

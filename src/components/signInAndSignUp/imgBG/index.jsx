@@ -1,6 +1,6 @@
 import React from "react";
-import signInBg from "../../assets/signInBG.png";
-import signUpBg from "../../assets/signUpBG.png";
+import signInBg from "../../../assets/signInBG.png";
+import signUpBg from "../../../assets/signUpBG.png";
 import { BGStyle } from "./style";
 
 export default function ImgBG({ title }) {
