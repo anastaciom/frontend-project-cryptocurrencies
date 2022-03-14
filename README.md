@@ -4,7 +4,7 @@
 
 ---
 
-## Deploy link: .........
+## Deploy link: https://project-cryptodash.netlify.app/
 
 ## About the project:
 
@@ -37,28 +37,6 @@
 
 ---
 
-## Dependencies :
-
-- **@emotion/react**
-- **@emotion/styled**
-- **@mui/icons-material**
-- **@mui/material**
-- **axios**
-- **react-redux**
-- **react-router-dom**
-- **react-spinners**
-- **react-switch**
-- **redux**
-- **redux-thunk**
-
----
-
-## DevDependencies:
-
-- **styled-components**
-
----
-
 ## Git Clone:
 
 ### First run the command to clone the project on your machine:
@@ -78,5 +56,27 @@
     npm run start
 
 ### will run at http://localhost:3000/
+
+---
+
+## In addition to the standard dependencies of "Create React App", it was used:
+
+- **@emotion/react**
+- **@emotion/styled**
+- **@mui/icons-material**
+- **@mui/material**
+- **axios**
+- **react-redux**
+- **react-router-dom**
+- **react-spinners**
+- **react-switch**
+- **redux**
+- **redux-thunk**
+
+---
+
+## DevDependencies:
+
+- **styled-components**
 
 ---
